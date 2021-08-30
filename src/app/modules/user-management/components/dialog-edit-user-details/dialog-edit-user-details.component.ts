@@ -25,7 +25,13 @@ import { IGenericDialog } from 'src/app/shared/models/generic-dialog.interface'
 import { IOrganization } from 'src/app/shared/models/organization/organization.interface'
 import { IToastMessageConfig } from 'src/app/shared/models/toast-message-config.interface'
 import { IUser } from 'src/app/shared/models/user/user.interface'
-import { APPROVE_USER_SUCCESS, EDIT_USER_ERROR, EDIT_USER_SUCCESS } from './constants'
+import {
+  APPROVE_USER_SUCCESS,
+  DELETE_USER_ERROR,
+  DELETE_USER_SUCCESS,
+  EDIT_USER_ERROR,
+  EDIT_USER_SUCCESS,
+} from './constants'
 
 @Component({
   selector: 'num-dialog-edit-user-details',
@@ -96,6 +102,14 @@ export class DialogEditUserDetailsComponent
       }
     )
 
+    this.closeAndRefresh()
+  }
+
+  handleDialogCancel(): void {
+    this.closeDialog.emit()
+  }
+
+  closeAndRefresh(): void {
     this.isApproval
       ? this.adminService.getUnapprovedUsers().subscribe()
       : this.adminService.refreshFilterResult()
@@ -103,7 +117,19 @@ export class DialogEditUserDetailsComponent
     this.closeDialog.emit()
   }
 
-  handleDialogCancel(): void {
-    this.closeDialog.emit()
+  deleteUser(): void {
+    this.adminService.deleteUser(this.userDetails.id).subscribe(
+      () => {
+        const messageParameters = {
+          firstName: this.userDetails.firstName,
+          lastName: this.userDetails.lastName,
+        }
+        this.toastMessageService.openToast({ ...DELETE_USER_SUCCESS, messageParameters })
+        this.closeAndRefresh()
+      },
+      () => {
+        this.toastMessageService.openToast(DELETE_USER_ERROR)
+      }
+    )
   }
 }

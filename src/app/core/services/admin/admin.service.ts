@@ -140,6 +140,12 @@ export class AdminService {
       .pipe(catchError(this.handleError))
   }
 
+  deleteUser(userId: string): Observable<never> {
+    return this.httpClient
+      .delete<never>(`${this.baseUrl}/user/${userId}`)
+      .pipe(catchError(this.handleError))
+  }
+
   setFilter(filterSet: IUserFilter): void {
     this.filterConfigSubject$.next(filterSet)
     this.filterSet = filterSet

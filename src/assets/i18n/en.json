@@ -241,6 +241,7 @@
     "EDIT": "Edit",
     "DELETE": "Delete",
     "DELETE_INFO_CARD": "Delete tile",
+    "DELETE_USER": "Delete User",
     "CLONE": "Clone",
     "EDIT_RESEARCHERS": "Edit researchers",
     "PUBLISH": "Start project",
@@ -416,7 +417,9 @@
     "APPROVE_USER_SUCCESS": "{{firstName}} {{lastName}} has been successfully edited and transferred to the list of approved users.",
     "EDIT_USER_ERROR": "The changes could not be saved. Please try again.",
     "EDIT_USER_SUCCESS": "{{firstName}} {{lastName}} was updated successfully.",
-    "REMOVE_ROLES_WARNING": "Please note: if you deselect all roles, it is not possible for the user to use the portal to its full extent."
+    "REMOVE_ROLES_WARNING": "Please note: if you deselect all roles, it is not possible for the user to use the portal to its full extent.",
+    "DELETE_USER_SUCCESS": "{{firstName}} {{lastName}} was deleted successfully.",
+    "DELETE_USER_ERROR": "The user could not be deleted. Please try again."
   },
   "ORGANIZATION_MANAGEMENT": {
     "OVERVIEW_HEADER": "Organization Overview",

@@ -242,6 +242,7 @@
     "EDIT": "Bearbeiten",
     "DELETE": "Löschen",
     "DELETE_INFO_CARD": "Info-Kachel löschen",
+    "DELETE_USER": "Benutzer entfernen",
     "CLONE": "Klonen",
     "EDIT_RESEARCHERS": "Forscher bearbeiten",
     "PUBLISH": "Projekt starten",
@@ -417,7 +418,9 @@
     "APPROVE_USER_SUCCESS": "{{firstName}} {{lastName}} wurde erfolgreich bearbeitet und in die Liste der genehmigten Benutzer übertragen.",
     "EDIT_USER_ERROR": "Die Änderungen konnten nicht gespeichert werden. Bitte versuchen Sie es erneut.",
     "EDIT_USER_SUCCESS": "{{firstName}} {{lastName}} wurde erfolgreich aktualisiert.",
-    "REMOVE_ROLES_WARNING": "Bitte beachten Sie: Wenn Sie alle Rollen abwählen, ist es dem Benutzer nicht möglich, das Portal in vollem Umfang zu nutzen."
+    "REMOVE_ROLES_WARNING": "Bitte beachten Sie: Wenn Sie alle Rollen abwählen, ist es dem Benutzer nicht möglich, das Portal in vollem Umfang zu nutzen.",
+    "DELETE_USER_SUCCESS": "{{firstName}} {{lastName}} wurde erfolgreich entfernt.",
+    "DELETE_USER_ERROR": "Der Benutzer konnte nicht entfernt werden. Bitte versuchen Sie es erneut."
   },
   "ORGANIZATION_MANAGEMENT": {
     "OVERVIEW_HEADER": "Organisationsübersicht",
