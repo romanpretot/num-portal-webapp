@@ -108,7 +108,9 @@
       "MESSAGE_SET_ALL_PARAMETERS": "You should first define the criterium to get a valid result.",
       "MESSAGE_ERROR_FEW_HITS": "Matching Hits are below minimum threshold.",
       "MESSAGE_ERROR_MESSAGE": "Could not determine Hits. Please try again."
-    }
+    },
+    "PRIVACY_PRIVATE": "Only with me",
+    "PRIVACY_PUBLIC": "Public"
   },
   "CONTENT_EDITOR": {
     "SAVE_NAVIGATION_SUCCESS": "The navigations items were successfully published.",
@@ -201,7 +203,7 @@
     "FILTER": "Filter",
     "ACTION": "Action",
     "CREATION_DATE": "Creation Date",
-    "USAGE": "Usage",
+    "USAGE": "Shared",
     "YES": "Yes",
     "NO": "No",
     "VALUE": "Value",
@@ -419,7 +421,8 @@
     "EDIT_USER_SUCCESS": "{{firstName}} {{lastName}} was updated successfully.",
     "REMOVE_ROLES_WARNING": "Please note: if you deselect all roles, it is not possible for the user to use the portal to its full extent.",
     "DELETE_USER_SUCCESS": "{{firstName}} {{lastName}} was deleted successfully.",
-    "DELETE_USER_ERROR": "The user could not be deleted. Please try again."
+    "DELETE_USER_ERROR": "The user could not be deleted. Please try again.",
+    "INVALID_USER_NAME_ERROR": "Please provide a valid name"
   },
   "ORGANIZATION_MANAGEMENT": {
     "OVERVIEW_HEADER": "Organization Overview",
