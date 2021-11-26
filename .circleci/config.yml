@@ -29,20 +29,24 @@ workflows:
           context: 
             - org-global
             - slack-secrets
+            - ms_teams
       - security_scan:
           context:
             - org-global
             - slack-secrets
+            - ms_teams
   build_and_test:
     jobs:
       - test:
           context: 
             - org-global
             - slack-secrets
+            - ms_teams
       - security_scan:
           context: 
             - org-global
             - slack-secrets
+            - ms_teams
           filters:
             branches:
               only:
