@@ -102,32 +102,6 @@ jobs:
                 break
               fi
             done
-      - slack/notify:
-          event: always
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": ":information_source: Security scan has completed :information_source:",
-                    "emoji": true
-                  }
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*OWASP report:* $URL_OF_OWASP_REPORT \n\n *Project repository name:* ${CIRCLE_PROJECT_REPONAME} \n\n *Branch name:* ${CIRCLE_BRANCH} \n\n *Project GIT repository:* << pipeline.project.git_url >> \n\n *CircleCI build:* ${CIRCLE_BUILD_URL} \n\n"
-                    }
-                  ]
-                }
-              ]
-            }
-      - failed-build-slack-notification
-
       - run:
           name: MS Teams OWASP Message
           command: |
@@ -162,7 +136,7 @@ jobs:
                     },
                     {
                       "name": "OWASP",
-                      "value": "*OWASP report:*   \n [Artifact Deploy]($OWASP_URL_ARTIFACT_DEPLOY)   \n[Integration]($OWASP_URL_INTEGRATION)   \n[Plugin]($OWASP_URL_PLUGIN)   \n[Server]($OWASP_URL_SERVER)   \n[Num Consent Plugin]($OWASP_URL_NUM_CONSENT_PLUGIN)   \n[Better Abac]($OWASP_URL_BETTER_ABAC)   \n\n *Project repository name:* ${CIRCLE_PROJECT_REPONAME} \n\n *Branch name:* ${CIRCLE_BRANCH} \n\n *Project GIT repository:* << pipeline.project.git_url >> \n\n *CircleCI build:* ${CIRCLE_BUILD_URL} \n\n"
+                      "value": "*OWASP report:* $URL_OF_OWASP_REPORT \n\n *Project repository name:* ${CIRCLE_PROJECT_REPONAME} \n\n *Branch name:* ${CIRCLE_BRANCH} \n\n *Project GIT repository:* << pipeline.project.git_url >> \n\n *CircleCI build:* ${CIRCLE_BUILD_URL} \n\n"
                     }
                   ],
                   "markdown": true
